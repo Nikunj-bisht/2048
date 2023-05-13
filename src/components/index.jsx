@@ -92,13 +92,13 @@ const GameBoard = () => {
       })}
       <div className={classes.score}>
         <h1>SCORE - {score}</h1>
-        <button
+        {/* <button
           title="Restart"
           onClick={() => {
           }}
         >
           Restart
-        </button>
+        </button> */}
       </div>
     </div>
   );
