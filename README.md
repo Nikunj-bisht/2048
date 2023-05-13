@@ -6,18 +6,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm i`
+
+To install all the dependencies
+
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `how to play`
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Use your arrow keys to move the tiles. When two tiles with the same number touch, they merge into one!
 
 ### `npm run build`
 
@@ -29,42 +29,22 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Grid Representation: The game is typically implemented using a two-dimensional array or matrix to represent the grid. Each element of the array corresponds to a tile on the grid, with its value representing the number on the tile.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Initial Setup: At the start of the game, two random tiles (either 2 or 4) are placed on the grid. These tiles are usually positioned in random empty cells.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+User Input: The game allows the player to make moves in four directions: up, down, left, or right. This can be done using arrow keys, swipe gestures (in mobile versions), or similar controls. The player's input triggers the corresponding movement of the tiles on the grid.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Tile Movement: When the player makes a move, the tiles on the grid slide as far as possible in the selected direction. If two tiles with the same number collide during this movement, they merge into a single tile with the sum of their values. After each move, a new tile (usually 2) is randomly generated and placed on an empty cell.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Game Over: The game continues until one of the following conditions is met:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The player reaches the 2048 tile, resulting in a win.
+There are no possible moves left, meaning the grid is full and no adjacent tiles can be combined. This results in a game over.
+Scoring: The player's score increases each time two tiles are merged. The score can be displayed on the screen to keep track of the player's progress.
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The game has been deployed to vercel - (https://2048-oguh.vercel.app/)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
