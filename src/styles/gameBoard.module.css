@@ -1,0 +1,21 @@
+.container{
+    /* margin: 0; */
+    /* height: 200px; */
+    align-items: center;
+    justify-content: center;
+height: 100%;
+flex:1;
+padding: 2px;
+
+}
+
+h1{
+    color:white
+}
+
+.score{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
