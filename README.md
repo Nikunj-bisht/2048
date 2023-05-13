@@ -17,15 +17,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 Use your arrow keys to move the tiles. When two tiles with the same number touch, they merge into one!
 
-### `npm run build`
+### `Game information`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+See the section about [deployment](https://2048-oguh.vercel.app/) for more information.
 
 Grid Representation: The game is typically implemented using a two-dimensional array or matrix to represent the grid. Each element of the array corresponds to a tile on the grid, with its value representing the number on the tile.
 
