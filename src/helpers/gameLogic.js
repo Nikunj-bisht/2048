@@ -126,6 +126,56 @@ export async function arrowPressed(gameData, choice) {
       return data;
   }
 }
+function findZeroIndexes(gameData) {
+  const zeroIndices = [];
+  for (let i = 0; i < 4; i++) {
+    for (let j = 0; j < 4; j++) {
+      let value = gameData[i][j];
+      if (value === 0) {
+        zeroIndices.push([i, j]);
+      }
+    }
+  }
+
+  return zeroIndices;
+}
+
+export async function checkForExit(gameData) {
+  for (let i = 0; i < 3; i++) {
+    let str = "";
+    for (let j = 0; j < 3; j++) {
+      str += gameData[i][j];
+      if (str.includes("2048")) {
+        alert("Game over");
+        return;
+      }
+    }
+  }
+  for (let i = 0; i < 3; i++) {
+    let str = "";
+    for (let j = 0; j < 3; j++) {
+      str += gameData[j][i];
+      if (str.includes("2048")) {
+        alert("Game over");
+        return;
+      }
+    }
+  }
+}
+
+export function fillRandomZero(gameData) {
+  let zeroIndices = findZeroIndexes(gameData);
+  if (zeroIndices.length === 0) {
+    alert("Game Over");
+    return;
+  }
+  const randomIndex = Math.floor(Math.random() * zeroIndices.length);
+  let num = [2, 4];
+  let fillNumber = Math.floor(Math.random() * 2);
+  let newData = [...gameData];
+  newData[zeroIndices[randomIndex][0]][zeroIndices[randomIndex][1]] =
+    num[fillNumber];
+}
 
 export function moveTileToEnd() {}
 
